@@ -1,0 +1,5 @@
+svcfg.options.AddServersideCallbackNetworkHandler("slider", "OnValueChanged", function(newval)
+	net.WriteDouble(newval)
+end, function()
+	return net.ReadDouble()
+end)
